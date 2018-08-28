@@ -9,15 +9,15 @@ BTS7960::BTS7960(uint8_t RPWM,uint8_t LPWM,uint8_t L_EN,uint8_t R_EN){
   _RPWM = RPWM;
   _LPWM = LPWM;
   _L_EN = L_EN;
-  _R_EN = R_EN;  
+  _R_EN = R_EN;
   pinMode(_RPWM, OUTPUT);
   pinMode(_LPWM, OUTPUT);
   pinMode(_L_EN, OUTPUT);
   pinMode(_R_EN, OUTPUT);
-  
+
 }
 
-void BTS7960::setSpeed(uint8_t pwm){
+void BTS7960::setSpeed(int8_t pwm){
   if (pwm < -255 || pwm > 255)
   {
     // out of range stop the motor
@@ -47,6 +47,3 @@ void BTS7960::stop(){
   analogWrite(_LPWM,0);
   analogWrite(_RPWM,0);
 }
-
-
-
