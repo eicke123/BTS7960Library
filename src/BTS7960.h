@@ -12,7 +12,7 @@ class BTS7960
 {
   public:
     BTS7960(uint8_t RPWM,uint8_t LPWM,uint8_t L_EN,uint8_t R_EN);
-    void setSpeed( int8_t pwm);
+    void setSpeed( int16_t pwm);
     void enable();
     void disable();
     void stop();

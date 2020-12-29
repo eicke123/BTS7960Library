@@ -17,7 +17,7 @@ BTS7960::BTS7960(uint8_t RPWM,uint8_t LPWM,uint8_t L_EN,uint8_t R_EN){
 
 }
 
-void BTS7960::setSpeed(int8_t pwm){
+void BTS7960::setSpeed(int16_t pwm){
   if (pwm < -255 || pwm > 255)
   {
     // out of range stop the motor
